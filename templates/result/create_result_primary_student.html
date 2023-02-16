@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Student Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous">
+    
+</head>
+<body>
+
+    
+    {% load crispy_forms_tags %}
+    <br>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="container">
+            <div class="form-group row">
+    
+                <div class="col">
+                    {{form.class_of|as_crispy_field}}
+                </div>
+                
+                <div class="col">
+                    {{form.position|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.terms|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.year|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.attendance|as_crispy_field}}
+                </div>
+    
+                <div class="col">
+                    {{form.name|as_crispy_field}}
+                </div>
+    
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    {{form.english_language_ca|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.english_language_exam|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.english_total|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.english_language_grade|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.english_language_remark|as_crispy_field}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col">
+                    {{form.mathematics_ca|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.mathematics_exam|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.mathematics_total|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.mathematics_grade|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.mathematics_remark|as_crispy_field}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col">
+                    {{form.agriculture_ca|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.agriculture_exam|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.agriculture_total|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.agriculture_grade|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.agriculture_remark|as_crispy_field}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col">
+                    {{form.civic_education_ca|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.civic_education_exam|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.civic_education_total|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.civic_education_grade|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.civic_education_remark|as_crispy_field}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col">
+                    {{form.computer_ca|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.computer_exams|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.computer_total|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.computer_grade|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.computer_remark|as_crispy_field}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col">
+                    {{form.science_ca|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.science_exam|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.science_total|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.science_grade|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.science_remark|as_crispy_field}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col">
+                    {{form.social_studies_ca|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.social_studies_exam|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.social_studies_total|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.social_studies_grade|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.social_studies_remark|as_crispy_field}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col">
+                    {{form.language_ca|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.language_exam|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.language_total|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.language_grade|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.language_remark|as_crispy_field}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col">
+                    {{form.physical_education_ca|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.physical_education_exam|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.physical_education_total|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.physical_education_grade|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.physical_education_remark|as_crispy_field}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col">
+                    {{form.history_ca|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.history_exam|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.history_total|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.history_grade|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.history_remark|as_crispy_field}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col">
+                    {{form.fiqh_ca|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.fiqh_exam|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.fiqh_total|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.fiqh_grade|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.fiqh_remark|as_crispy_field}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col">
+                    {{form.tawheed_ca|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.tawheed_exam|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.tawheed_total|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.tawheed_grade|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.tawheed_remark|as_crispy_field}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col">
+                    {{form.arabic_language_ca|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.arabic_language_exam|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.arabic_language_total|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.arabic_language_grade|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.arabic_language_remark|as_crispy_field}}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col">
+                    {{form.quran_ca|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.quran_exam|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.quran_total|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.quran_grade|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.quran_remark|as_crispy_field}}
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    {{form.tahfidz_ca|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.tahfidz_exam|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.tahfidz_total|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.tahfidz_grade|as_crispy_field}}
+                </div>
+
+                <div class="col">
+                    {{form.tahfidz_remark|as_crispy_field}}
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Create Result</button>
+            </div>
+        </div>
+    </form>
+    <br>
+    <br>
+</body>
+</html>

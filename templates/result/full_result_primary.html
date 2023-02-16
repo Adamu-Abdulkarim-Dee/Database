@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"> 
+</head>
+<style>
+    .thumb{
+        width: 100px;
+        height: auto;
+    }
+</style>
+<body>
+    <nav class="navbar navbar-light bg-light shadow-sm bg-body">
+        <div class="container">
+          <a class="navbar-brand mr-auto" href="#">
+            <img class="rounded-circle thumb" src="{{board.school_batch.url}}" alt="">
+        </a>
+        <div class="mr-auto">
+            <span class="navbar-text">
+                <h2 class="text-primary">{{board.school_name}}</h2>
+                <h5>{{board.school_address}}, {{board.location}}</h5>
+                <h6>P O Box: {{board.p_o_box}}</h6>
+              </span>
+        </div>
+        </div>
+      </nav>
+    <div class="container p-5">
+        <div class="row justify-content-center">
+                    <table class="table table-bordered">
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Subject</th>
+                                <th scope="col">C/A</th>
+                                <th scope="col">Exams</th>
+                                <th scope="col">Total mark</th>
+                                <th scope="col">Grade</th>
+                                <th scope="col">Remark</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <th scope="row">English Language</th>
+                                <td>{{result.english_language_ca}}</td>
+                                <td>{{result.english_language_exam}}</td>
+                                <td>{{result.english_total}}</td>
+                                <td>{{result.english_language_grade}}</td>
+                                <td>{{result.english_language_remark}}</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">mathematics</th>
+                                <td>{{result.mathematics_ca}}</td>
+                                <td>{{result.mathematics_exam}}</td>
+                                <td>{{result.mathematics_total}}</td>
+                                <td>{{result.mathematics_grade}}</td>
+                                <td>{{result.mathematics_remark}}</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Science</th>
+                                <td>{{result.science_ca}}</td>
+                                <td>{{result.science_exam}}</td>
+                                <td>{{result.science_total}}</td>
+                                <td>{{result.science_grade}}</td>
+                                <td>{{result.science_remark}}</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Computer</th>
+                                <td>{{result.computer_ca}}</td>
+                                <td>{{result.computer_exams}}</td>
+                                <td>{{result.computer_total}}</td>
+                                <td>{{result.computer_grade}}</td>
+                                <td>{{result.computer_remark}}</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Civic Education</th>
+                                <td>{{result.civic_education_ca}}</td>
+                                <td>{{result.civic_education_exams}}</td>
+                                <td>{{result.civic_education_total}}</td>
+                                <td>{{result.civic_education_grade}}</td>
+                                <td>{{result.civic_education_remark}}</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Agriculture</th>
+                                <td>{{result.agriculture_ca}}</td>
+                                <td>{{result.agriculture_exams}}</td>
+                                <td>{{result.agriculture_total}}</td>
+                                <td>{{result.agriculture_grade}}</td>
+                                <td>{{result.agriculture_remark}}</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Language</th>
+                                <td>{{result.language_ca}}</td>
+                                <td>{{result.language_exam}}</td>
+                                <td>{{result.language_total}}</td>
+                                <td>{{result.language_grade}}</td>
+                                <td>{{result.language_remark}}</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Physical Education</th>
+                                <td>{{result.physical_education_ca}}</td>
+                                <td>{{result.physical_education_exam}}</td>
+                                <td>{{result.physical_education_total}}</td>
+                                <td>{{result.physical_education_grade}}</td>
+                                <td>{{result.physical_education_remark}}</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">history</th>
+                                <td>{{result.history_ca}}</td>
+                                <td>{{result.history_exam}}</td>
+                                <td>{{result.history_total}}</td>
+                                <td>{{result.history_grade}}</td>
+                                <td>{{result.history_remark}}</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Social Studies</th>
+                                <td>{{result.social_studies_ca}}</td>
+                                <td>{{result.social_studies_exam}}</td>
+                                <td>{{result.social_studies_total}}</td>
+                                <td>{{result.social_studies_grade}}</td>
+                                <td>{{result.social_studies_remark}}</td>
+                            </tr>
+                            
+                            <tr>
+                                <th scope="row">Fiqh</th>
+                                <td>{{result.fiqh_ca}}</td>
+                                <td>{{result.fiqh_exam}}</td>
+                                <td>{{result.fiqh_total}}</td>
+                                <td>{{result.fiqh_grade}}</td>
+                                <td>{{result.fiqh_remark}}</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Tawheed</th>
+                                <td>{{result.tawheed_ca}}</td>
+                                <td>{{result.tawheed_exam}}</td>
+                                <td>{{result.tawheed_total}}</td>
+                                <td>{{result.tawheed_grade}}</td>
+                                <td>{{result.tawheed_remark}}</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Qur'an</th>
+                                <td>{{result.quran_ca}}</td>
+                                <td>{{result.quran_exam}}</td>
+                                <td>{{result.quran_total}}</td>
+                                <td>{{result.quran_grade}}</td>
+                                <td>{{result.quran_remark}}</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Arabic Language</th>
+                                <td>{{result.arabic_language_ca}}</td>
+                                <td>{{result.arabic_language_exam}}</td>
+                                <td>{{result.arabic_language_total}}</td>
+                                <td>{{result.arabic_language_grade}}</td>
+                                <td>{{result.arabic_language_remark}}</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Tahfidz</th>
+                                <td>{{result.tahfidz_ca}}</td>
+                                <td>{{result.tahfidz_exam}}</td>
+                                <td>{{result.tahfidz_total}}</td>
+                                <td>{{result.tahfidz_grade}}</td>
+                                <td>{{result.tahfidz_remark}}</td>
+                            </tr>
+
+
+
+                        </tbody>
+
+
+                    </table>
+                    <div class="col">
+                        <p>
+                            {{result.name}}
+                            <hr>
+                        </p>
+                    </div>
+                            <div class="col">
+                                <p>
+                                    Position: {{result.position}}
+                                    <hr>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p>
+                                    Term: {{ result.terms }}
+                                    <hr>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p>
+                                    year: {{ result.year }}
+                                    <hr>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p>
+                                    Attendance: {{result.attendance}}
+                                    <hr>
+                                </p>
+                            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            
+        </div>
+    </div>
+    <div class="text-center">
+        <a class="btn btn-danger" href="{% url 'Delete-Primary-Result' result.slug %}">Delete</a>
+        <a class="btn btn-primary" href="{% url 'Edit-Result' result.slug %}">Edit</a>
+        <button onclick="window.print()" class="btn btn-success" href="">Print</button>
+    </div>
+    <br>
+    <br>
+</body>
+</html>

@@ -1,0 +1,263 @@
+{% load jsignature_filters %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{prima.slug}}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous">
+</head>
+<style>
+    .thumb{
+        width: 100px;
+        height: auto;
+    }
+</style>
+<body>
+    <nav class="navbar navbar-light bg-light shadow-sm bg-body">
+        <div class="container">
+          <a class="navbar-brand mr-auto" href="#">
+            <img class="rounded-circle thumb" src="{{board.school_batch.url}}" alt="">
+        </a>
+        <div class="mr-auto">
+            <span class="navbar-text">
+                <h2 class="text-primary fw-bolder">{{board.school_name}}</h2>
+                <h5 class="fw-bolder">{{board.school_address}}, {{board.location}}</h5>
+                <h6 class="fw-bolder">P O Box: {{board.p_o_box}}</h6>
+              </span>
+        </div>
+        </div>
+      </nav>
+      <br>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col">
+                <div class="card" style="width: 300px;">
+                    <img src="{{  prima.profile_picture.url }}" alt="" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bolder">
+                        {{ prima.first_name }} {{ prima.last_name }}
+                        </h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-content">
+                            <div class="card-header shadow-sm bg-body text-center">
+                                <h4>Student Information</h4>
+                            </div>
+                            <br>
+
+                            <div class="row justify-content-center fw-bolder">
+                                <div class="col">
+                                    <ul>
+                                        <li>Admission Number: {{prima.admission_number}}</li>
+                                    </ul>
+                                </div>
+    
+                                <div class="col">
+                                    <ul>
+                                        <li>Gender: <br> {{prima.gender}}</li>
+                                    </ul>
+                                </div>
+
+                                <div class="col">
+                                    <ul>
+                                        <li>Address: <br> {{prima.address_of_student}}</li>
+                                    </ul>
+                                </div>
+
+                                <div class="col">
+                                    <ul>
+                                        <li>Class: <br> {{prima.class_Of_student}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-center fw-bolder">
+
+                                <div class="col">
+                                    <ul>
+                                        <li>Date of Birth: <br> {{prima.date_of_birth}}</li>
+                                    </ul>
+                                </div>
+
+                                <div class="col">
+                                    <ul>
+                                        <li>Religin: <br> {{prima.religion}}</li>
+                                    </ul>
+                                </div>
+
+                                <div class="col">
+                                    <ul>
+                                        <li>Mother Name: <br> {{prima.mother_name}}</li>
+                                    </ul>
+                                </div>
+
+                                <div class="col">
+                                    <ul>
+                                        <li>Year of Graduation: <br> {{prima.year_of_graduation}}</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="row justify-content-center fw-bolder">
+
+                                <div class="col">
+                                    <ul>
+                                        <li>Comments: <br>
+                                        {{prima.comment_of_student}}</li>
+                                    </ul>
+                                </div>
+
+                                <div class="col">
+                                    <ul>
+                                        <li>Country: <br>
+                                            {{prima.nationality_of_student}}</li>
+                                    </ul>
+                                </div>
+
+                                <div class="col">
+                                    <ul>
+                                        <li>State: <br> {{prima.state_of_student}}</li>
+                                    </ul>
+                                </div>
+
+                                <div class="col">
+                                    <ul>
+                                        <li>Local Government: <br> 
+                                            {{prima.local_government_of_student}}</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="row justify-content-center fw-bolder">
+
+                                <div class="col">
+                                    <ul>
+                                        <li>student Signature <br>
+                                            <img src="{{ prima.signature_of_student|signature_base64 }}" alt="{{ obj }}" /></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col text-center">
+                <h3 class="fw-bolder">Certificate of Birth</h3>
+                <img src="{{prima.certificate_of_birth_photo.url}}" alt="" class="card-img-top">               
+            </div>
+            <div class="col text-center">
+                <h3 class="fw-bolder">Residential Certificate</h3>
+                <img src="{{prima.residential_certificate_photo.url}}" alt="" class="card-img-top"> 
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-11">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-header text-center text-primary shadow-sm bg-body">
+                            <h1>Guardian</h1>
+                        </div>
+                        <br>
+                       <div class="row justify-content-center fw-bolder">
+
+                        <div class="col">
+                            <ul>
+                                <li>Name: <br> {{prima.name_of_guardian}}</li>
+                            </ul>
+                        </div>
+
+                        <div class="col">
+                            <ul>
+                                <li>Nationality: <br>{{prima.nationality_of_guardian}}</li>
+                            </ul>
+                        </div>
+
+                        <div class="col">
+                            <ul>
+                                <li>State of Origin: <br>{{prima.state_of_guardian}}</li>
+                            </ul>
+                        </div>
+
+                        <div class="col">
+                            <ul>
+                                <li>Local Government: <br> {{prima.local_government_of_guardian}}</li>
+                            </ul>
+                        </div>
+
+                        <div class="col">
+                            <ul>
+                                <li>Address: <br>{{ prima.address_of_guardian }}</li>
+                            </ul>
+                           </div>
+                        </div>
+
+                        <div class="row justify-content-center fw-bolder">
+                            <div class="col">
+                                <ul>
+                                    <li>Work Address: <br> {{prima.work_address}}</li>
+                                </ul>
+                            </div>
+                            <div class="col">
+                                <ul>
+                                    <li>Occupation: <br> {{prima.occupation_of_guardian }}</li>
+                                </ul>
+                            </div>
+
+                            <div class="col">
+                                <ul>
+                                    <li>Relationship: <br> {{prima.relationship}}</li>
+                                </ul>
+                            </div>
+
+                            <div class="col">
+                                <ul>
+                                    <li>Signature of Guardian<br>
+                                        <img src="{{ prima.signature_of_guardian|signature_base64 }}" alt="{{ obj }}" /></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="text-center">
+        <a class="btn btn-danger" href="{% url 'Delete-primary' prima.slug %}">Delete</a>
+        <a class="btn btn-primary" href="{% url 'Edit-Primary-Student' prima.slug %}">Edit</a>
+        <button onclick="window.print()" class="btn btn-success" href="">Print</button>
+    </div>
+    <br>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ boards.user }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous">
+</head>
+<body>
+    <br>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card mb-3" style="width: 600px;">
+                    <img class="card-img-top" src="{{  boards.school_batch.url }}" alt="Card image cap">
+                    <div class="card-body">
+                      <h3 class="card-title text-center">{{ boards.school_name }}</h3>
+                      <p class="card-text">
+                        <div class="row justify-content-center">
+                            <div class="col">
+                                <ul>
+                                    <li>P O BOX: <br> {{boards.p_o_box}}</li>
+                                </ul>
+                            </div>
+
+                            <div class="col">
+                                <ul>
+                                    <li>Address:
+                                        <br>{{boards.school_address}}</li>
+                                </ul>
+                            </div>
+
+                            <div class="col">
+                                <ul>
+                                    <li>Owner: {{boards.school_owner_name}}</li>
+                                </ul>
+                            </div>
+
+                            <div class="col">
+                                <ul>
+                                    <li>Tax ID: <br> {{boards.tax_number}}</li>
+                                </ul>
+                            </div>
+
+                            <div class="col">
+                                <ul>
+                                    <li>Location: <br> {{boards.location}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                      </p>
+                      <p class="card-text text-center"><small class="text-muted">
+                        <a class="btn btn-primary btn-lg" href="{% url 'Board' boards.slug %}">Edit Profile</a>
+                        </a>
+                      </small>
+                    </p>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
