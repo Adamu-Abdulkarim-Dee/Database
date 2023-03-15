@@ -1,13 +1,14 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.models import User, auth
-from myschool.models import Primary, PrimaryAlbum, Secondary, Contact, SecondaryAlbum, SchoolBoard, ResultClass, SectionPrimary
+from myschool.models import Primary, PrimaryAlbum, Secondary, SecondaryAlbum
+from company.models import SchoolBoard
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import CreateView 
 from django.views.generic.edit import UpdateView, DeleteView
 from django.urls import reverse_lazy
-from .forms import PrimaryForms, SecondaryForm, EditSecondaryForm, ContactForm,PrimaryEditForms, EditBoardForm, ResultPrimaryForms, EditResultPrimaryForms
+from .forms import PrimaryForms, SecondaryForm, EditSecondaryForm, PrimaryEditForms
 from django.db.models import Q
 from django.conf import settings
 
@@ -108,14 +109,6 @@ class BDeletePrimary(DeleteView):
     success_url = reverse_lazy('Home')
 
 
-
-
-
-
-
-
-
-
 #Specifically for secondary school.
 def secondary(request):
     albums = SecondaryAlbum.objects.filter(user=request.user)
@@ -192,161 +185,5 @@ class DeleteSecondary(DeleteView):
 
 
 
-#This side is for the school Board
-
-class Board(UpdateView):
-    model = SchoolBoard
-    form_class = EditBoardForm
-    template_name = 'board.html'
-    success_url = reverse_lazy('Home')
-
-
-
-
-#User Registrations and Login/SignIn.
-def login(request):
-    if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
-
-        user = auth.authenticate(username=username, password=password)
-
-        if user is not None:
-            auth.login(request, user)
-            return redirect('Home')
-        else:
-            messages.info(request, 'Invalid Credential') 
-            return redirect('login')
-    else:        
-        return render(request, 'login.html')  
-
-
-
-
-def sign_up(request):
-    if request.method == 'POST':
-        username = request.POST['username']
-        
-        email = request.POST['email']
-        password = request.POST['password']
-        password2 = request.POST['password2']
-
-        if password == password2:
-            if User.objects.filter(email=email).exists():
-                messages.info(request, 'Email Or Username Already Taking')
-                return redirect('Register')
-            elif User.objects.filter(username=username).exists():
-                messages.info(request, 'Username Is Taken')
-                return redirect('Register')
-            else:
-                user = User.objects.create_user(username=username, email=email, password=password)
-                user.save();
-                return redirect('login')
-        else:
-            messages.info(request, 'Password Not Match')
-            return redirect('Register') 
-
-        return redirect ('/')     
-    else:
-        return render(request, 'signup.html')
-
-def terms(request):
-    return render(request, 'terms.html')
-
-def about(request):
-    return render(request, 'about.html')
-
-class Contact(CreateView):
-    model = Contact 
-    form_class = ContactForm
-    template_name='contact.html' 
-    success_url = reverse_lazy('Home')
-
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super (Contact, self).form_valid(form) 
-
-
-
-
-#This side is for payment.
-
-def handle_payment(request):
-
-    return render(request, 'payment.html')
-
-
-
-def view_result_primary(request):
-    reults = ResultClass.objects.filter(user=request.user)
-    context = {
-        'results':reults
-    }
-    return render(request, 'result/primary_result.html', context)
-
-def result_view(request, pk):
-    post = get_object_or_404(ResultClass, id=pk)
-
-    result = ResultClass.objects.get(id=pk)
-
-    all_results = SectionPrimary.objects.filter(class_of_id=result.pk)
-
-    context = {
-        'post':post,
-        'result':result,
-        'all_results':all_results
-    }
-    return render(request, 'result/result_view.html', context)
-
-def View_Primary_result(request, pk):
-    post = get_object_or_404(SectionPrimary, id=pk)
-    result = SectionPrimary.objects.get(id=pk)
-    board = SchoolBoard.objects.get(user=request.user)
-    context = {
-        'post':post,
-        'result':result,
-        'board':board
-    }
-    return render(request, 'result/full_result_primary.html', context)
-
-class Result(CreateView):
-    model = ResultClass
-    fields = ['name']
-    template_name = 'result/create_result_primary.html'
-    success_url = reverse_lazy('Home')
-    
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super (Result, self).form_valid(form)
-
-class CreateResult(CreateView):
-    model = SectionPrimary
-    form_class = ResultPrimaryForms
-    template_name = 'result/create_result_primary_student.html'
-    success_url = reverse_lazy('Home')
-
-    def get_form(self, form_class=None):
-        form = super().get_form(form_class)
-        form.fields['class_of'].queryset = ResultClass.objects.filter(user=self.request.user)
-        return form
-
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super (CreateResult, self).form_valid(form)
-
-class EditResult(UpdateView):
-    model = SectionPrimary
-    form_class = EditResultPrimaryForms
-    template_name = 'result/edit_result_primary.html'
-    success_url = reverse_lazy('Home')
-
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super (EditResult, self).form_valid(form)
-
-class DeletePrimaryResult(DeleteView):
-    model = SectionPrimary
-    template_name = 'result/delete_primary_result.html'
-    success_url = reverse_lazy('Home')
 
 

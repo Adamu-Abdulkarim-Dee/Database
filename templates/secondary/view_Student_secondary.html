@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{second.slug}}</title>
+    <title>{{prima.slug}}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
     rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
     crossorigin="anonymous">
@@ -31,10 +31,10 @@
         </div>
         </div>
       </nav>
-    <br>
+      <br>
     <div class="container">
-        <div class="row justify-content-center my-2">
-            <div class="col text-center">
+        <div class="row justify-content-center">
+            <div class="col">
                 <div class="card" style="width: 300px;">
                     <img src="{{  second.profile_picture.url }}" alt="" class="card-img-top">
                     <div class="card-body text-center">
@@ -45,205 +45,204 @@
                     </div>
                 </div>
             </div>
-        
-    
-            <div class="col-md-8">
-                <div class="card my-2">
-                    <div class="card-body">
-                        <div class="card-content">
-                            <div class="row justify-content-center fw-bolder">
-                                <div class="col">
-                                    <ul>
-                                        <li>Admission Number: {{second.admission_number}}</li>
-                                    </ul>
-                                </div>
-    
-                                <div class="col">
-                                    <ul>
-                                        <li>Gender: <br> {{second.gender}}</li>
-                                    </ul>
-                                </div>
 
-                                <div class="col">
-                                    <ul>
-                                        <li>Address: <br> {{second.address_of_student}}</li>
-                                    </ul>
-                                </div>
 
-                                <div class="col">
-                                    <ul>
-                                        <li>Class: <br> {{second.class_Of_student}}</li>
-                                    </ul>
-                                </div>
-                            </div>
+            <div class="col-md-8 p-3">
+                <div class="card">
+                    <div class="card-header text-center shadow-sm bg-body">
+                        <h3>Student Information</h3>
+                    </div>
+                    <div class="card-body shadow-sm">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Admission Number</th>
+                                    <th scope="col">{{second.admission_number}}</th>
+                                </tr>
+                            </thead>
 
-                            <div class="row justify-content-center fw-bolder">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Gender</th>
+                                    <th scope="col">{{second.gender}}</th>
+                                </tr>
+                            </thead>
 
-                                <div class="col">
-                                    <ul>
-                                        <li>Date of Birth: <br> {{second.date_of_birth}}</li>
-                                    </ul>
-                                </div>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Address</th>
+                                    <th scope="col">{{second.address_of_student}}</th>
+                                </tr>
+                            </thead>
 
-                                <div class="col">
-                                    <ul>
-                                        <li>Religin: <br> {{second.religion}}</li>
-                                    </ul>
-                                </div>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Class</th>
+                                    <th scope="col">{{second.class_Of_student}}</th>
+                                </tr>
+                            </thead>
 
-                                <div class="col">
-                                    <ul>
-                                        <li>Mother Name: <br> {{secon.mother_name}}</li>
-                                    </ul>
-                                </div>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Date of Birth</th>
+                                    <th scope="col">{{second.date_of_birth}}</th>
+                                </tr>
+                            </thead>
 
-                                <div class="col">
-                                    <ul>
-                                        <li>Year of Graduation: <br> {{second.year_of_graduation}}</li>
-                                    </ul>
-                                </div>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Religion</th>
+                                    <th scope="col">{{second.religion}}</th>
+                                </tr>
+                            </thead>
 
-                            </div>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Mother Name</th>
+                                    <th scope="col">{{second.mother_name}}</th>
+                                </tr>
+                            </thead>
 
-                            <div class="row justify-content-center fw-bolder">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Year of Graduation</th>
+                                    <th scope="col">{{second.year_of_graduation}}</th>
+                                </tr>
+                            </thead>
 
-                                <div class="col">
-                                    <ul>
-                                        <li>Country: <br>
-                                            {{second.nationality_of_student}}</li>
-                                    </ul>
-                                </div>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Comment</th>
+                                    <th scope="col">{{second.comment_of_student}}</th>
+                                </tr>
+                            </thead>
 
-                                <div class="col">
-                                    <ul>
-                                        <li>State: <br> {{second.state_of_student}}</li>
-                                    </ul>
-                                </div>
+                            <thead>
+                                <tr>
+                                    <th scope="col">State</th>
+                                    <th scope="col">{{second.state_of_student}}</th>
+                                </tr>
+                            </thead>
 
-                                <div class="col">
-                                    <ul>
-                                        <li>Local Government: <br> 
-                                            {{second.local_government_of_student}}</li>
-                                    </ul>
-                                </div>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Local Government</th>
+                                    <th scope="col">{{second.local_government_of_student}}</th>
+                                </tr>
+                            </thead>
 
-                            </div>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nationality</th>
+                                    <th scope="col">{{second.nationality_of_student}}</th>
+                                </tr>
+                            </thead>
 
-                            <div class="row justify-content-center fw-bolder">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Signature</th>
+                                    <th scope="col">
+                                        <img src="{{ second.signature_of_student|signature_base64 }}" alt="{{ obj }}" /></li>
+                                    </th>
+                                </tr>
+                            </thead>
 
-                                <div class="col">
-                                    <ul>
-                                        <li>Comments: <br>
-                                        {{second.comment_of_student}}</li>
-                                    </ul>
-                                </div>
 
-                                <div class="col">
-                                    <ul>
-                                        <li>student Signature <br>
-                                            <img src="{{ second.signature_of_student|signature_base64 }}" alt="{{ obj }}" /></li>
-                                    </ul>
-                                </div>
-
-                            </div>
-
-                        </div>
+                        </table>
                     </div>
                 </div>
             </div>
 
+            <div class="container p-5">
+                <div class="row justify-content-center">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-header text-center shadow-sm bg-body">
+                                <h3>Guardian Information</h3>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Full Name</th>
+                                            <th scope="col">{{second.name_of_guardian}}</th>
+                                        </tr>
+                                    </thead>
 
-        </div>
-    </div>
-    <br>
-    <div class="container">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">State</th>
+                                            <th scope="col">{{second.state_of_guardian}}</th>
+                                        </tr>
+                                    </thead>
+
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Local Government</th>
+                                            <th scope="col">{{second.local_government_of_guardian}}</th>
+                                        </tr>
+                                    </thead>
+
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Nationality</th>
+                                            <th scope="col">{{second.nationality_of_guardian}}</th>
+                                        </tr>
+                                    </thead>
+
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Address</th>
+                                            <th scope="col">{{ second.address_of_guardian }}</th>
+                                        </tr>
+                                    </thead>
+
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Work Address</th>
+                                            <th scope="col">{{second.work_address}}</th>
+                                        </tr>
+                                    </thead>
+
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Occupation</th>
+                                            <th scope="col">{{second.occupation_of_guardian }}</th>
+                                        </tr>
+                                    </thead>
+
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Signature</th>
+                                            <th scope="col">
+                                                <img src="{{ second.signature_of_guardian|signature_base64 }}" alt="{{ obj }}" /></li>
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Relationship</th>
+                                            <th scope="col">{{second.relationship}}</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+    <div class="container p-5">
         <div class="row justify-content-center">
             <div class="col text-center">
                 <h3 class="fw-bolder">Certificate of Birth</h3>
                 <img src="{{second.certificate_of_birth_photo.url}}" alt="" class="card-img-top">               
             </div>
-            <div class="col">
+            <div class="col text-center">
                 <h3 class="fw-bolder">Residential Certificate</h3>
                 <img src="{{second.residential_certificate_photo.url}}" alt="" class="card-img-top"> 
-            </div>
-        </div>
-    </div>
-    <br>
-    <br>
-    <br>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-11">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="card-header text-center text-primary shadow-sm bg-body">
-                            <h1>Guardian</h1>
-                        </div>
-                        <br>
-                       <div class="row justify-content-center fw-bolder">
-
-                        <div class="col">
-                            <ul>
-                                <li>Full Name: <br> {{second.name_of_guardian}}</li>
-                            </ul>
-                        </div>
-
-                        <div class="col">
-                            <ul>
-                                <li>Nationality: <br>{{second.nationality_of_guardian}}</li>
-                            </ul>
-                        </div>
-
-                        <div class="col">
-                            <ul>
-                                <li>State of Origin: <br>{{second.state_of_guardian}}</li>
-                            </ul>
-                        </div>
-
-                        <div class="col">
-                            <ul>
-                                <li>Local Government: <br> {{second.local_government_of_guardian}}</li>
-                            </ul>
-                        </div>
-
-                        <div class="col">
-                            <ul>
-                                <li>Address: <br>{{ second.address_of_guardian }}</li>
-                            </ul>
-                           </div>
-                        </div>
-
-                        <div class="row justify-content-center fw-bolder">
-                            <div class="col">
-                                <ul>
-                                    <li>Work Address: <br> {{second.work_address}}</li>
-                                </ul>
-                            </div>
-                            <div class="col">
-                                <ul>
-                                    <li>Occupation: <br> {{second.occupation_of_guardian }}</li>
-                                </ul>
-                            </div>
-
-                            <div class="col">
-                                <ul>
-                                    <li>Relationship: <br> {{second.relationship}}</li>
-                                </ul>
-                            </div>
-
-                            <div class="col">
-                                <ul>
-                                    <li>Signature of Guardian<br>
-                                        <img src="{{ second.signature_of_guardian|signature_base64 }}" alt="{{ obj }}" /></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        
-                        </div>
-        
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -253,6 +252,7 @@
         <a class="btn btn-primary" href="{% url 'Edit-Secondary-Student' second.slug %}">Edit</a>
         <button onclick="window.print()" class="btn btn-success" href="">Print</button>
     </div>
+    <br>
     <br>
 </body>
 </html>

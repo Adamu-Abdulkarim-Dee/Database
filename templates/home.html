@@ -47,27 +47,51 @@
           </div>
         </div>
         {% endfor %}
-        <!--
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <a href="{% url 'Result-Primary' %}" class="btn btn-success btn-lg">Result</a>
-            </div>
-          </div>
-        </div>-->
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <a href="{% url 'Pay' %}" class="btn btn-success btn-lg">Payments</a>
-            </div>
-          </div>
-        </div>
 
         <div class="col">
           <div class="card shadow-sm">
             <div class="card-body">
               <a href="{% url 'Contact' %}" class="btn btn-success btn-lg">Complaint</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="row justify-content-center">
+          <div class="col p-2">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <a href="{% url 'Result-Primary' %}" class="btn btn-success btn-lg">Primary Result</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col p-2">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <a href="{% url 'Secondary-Results-Albums' %}" class="btn btn-success btn-lg">Science Report Card</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col p-2">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <a href="{% url 'Art' %}" class="btn btn-success btn-lg">Art and Social Science Report Card</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col p-2">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <a href="{% url 'Commerce-C' %}" class="btn btn-success btn-lg">Commerce Report Card</a>
+              </div>
             </div>
           </div>
         </div>
@@ -77,3 +101,4 @@
     </div>
 </body>
 </html>
+

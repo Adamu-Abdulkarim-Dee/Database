@@ -1,111 +1,35 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
-    rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" 
-    crossorigin="anonymous">
-  </head>
-<body> 
-    <nav class="navbar navbar-expand-lg navbar-light bg-body shadow-lg">
-        <div class="container">
-          <a class="navbar-brand" href="#">
-            <h1>Pondadb</h1>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item active">
-                <a class="btn btn-primary mx-lg-2 mx-0 my-lg-0 my-2" href="{% url 'About' %}">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="btn btn-primary mx-lg-2 mx-0 my-lg-0 my-2" href="{% url 'login' %}">Login</a>
-              </li>
-              <li class="nav-item">
-                <a class="btn btn-primary mx-lg-2 mx-0 my-lg-0 my-2" href="{% url 'Register' %}">Singn-Up</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <br>
-      <br>
-      <br>
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col text-center">
-            <h1 style="color: dodgerblue;" class="fw-bold">Ponda Database</h1>
-            <h5 class="fw-bold">
-              Pondadb is a web-based database system that allows primary and secondary schools to store their student information in one place
-              with an easy-to-use interface. Administrator can easily access the database at anytime.
-              <h5>We help you to improve the learning process by giving you peace of mind, which is an important factor in achieving
-                a sucesseful education.
-              </h5>
-          </h5>
-          </div>
-        </div>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<style>
+  .container-fluid {
+    background-color: green;
+    color: white;
+  }
+</style>
+<body>
+  <div class="container-fluid p-5">
+    <div class="row justify-content-center">
+      <div class="text-center">
+        <h2 class="fw-bold">Ponda is a web database system that allow primary and secondary school to store their student information in one place
+          with an easy user interface. Administrator can easily access the database at anytime.</h2>
+          <br>
       </div>
+    </div>
+    <div>
+    </div>
+  </div>
+  
       <br>
-      <div class="container">
-        <div class="row justify-content-center">
-            <h1 class="fw-bold text-center text-primary">Why you should use pondadb</h1>
-
-            <div class="card my-2 text-center shadow-sm bg-body">
-              <div class="card-body">
-                <div class="col p-3">
-                  <h3 class="fw-bold">
-                    Ponda database is used to store student information. It helps the schools to organize their data and keep it securely on 
-                    web.
-                  </h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="card my-2 text-center shadow-sm bg-body">
-              <div class="card-body">
-                <div class="col p-3">
-                  <h3 class="fw-bold">
-                    you will never forget a student because you have the right to know who they are. This database keeps your student 
-                    information safe at all the time. 
-                  </h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="card my-2 text-center shadow-sm bg-body">
-              <div class="card-body">
-                <div class="col p-3">
-                  <h3 class="fw-bold">
-                   you can search and retrive the student information by visiting their albums. School should use ponda database
-                   because it helps to reduce the risk of data loss and helps schools to stay update about their student history and their 
-                   performance.
-                  </h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="card my-2 text-center shadow-sm bg-body">
-              <div class="card-body">
-                <div class="col p-3">
-                  <h3 class="fw-bold">
-                    In this didgital age, school should consider using ponda database to store the necessary data of their student
-                    such as names, year of graduation, data of birth, student address, guardians information, and grade. 
-                  </h3>
-                </div>
-              </div>
-            </div>
-
-        </div>
-      </div>
-      <br>
-      <br>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
 </body>
 </html>

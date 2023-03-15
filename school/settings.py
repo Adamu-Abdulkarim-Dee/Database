@@ -41,14 +41,17 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'whitenoise.runserver_nostatic',
     'myschool',
+    'results',
+    'company',
     'crispy_forms',
     'crispy_bootstrap5',
     'bootstrap5',
-    'materializecssform',
     'django_countries',
     'jsignature',
     "phonenumber_field",
 ]
+
+AUTH_USER_MODEL = 'company.User'
 
 
 MIDDLEWARE = [

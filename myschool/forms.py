@@ -1,5 +1,5 @@
 from django import forms
-from .models import Primary, Secondary, SchoolBoard, SectionPrimary, Contact
+from .models import Primary, Secondary
 from jsignature.forms import JSignatureField
 from jsignature.widgets import JSignatureWidget
 
@@ -102,26 +102,7 @@ class PrimaryEditForms(forms.ModelForm):
         'address_of_guardian', 'nationality_of_guardian', 'occupation_of_guardian', 'work_address',
         'state_of_guardian', 'local_government_of_guardian', 'relationship', 'signature_of_guardian']
 
-class EditBoardForm(forms.ModelForm):
-    class Meta:
-        model = SchoolBoard
-        fields = ['school_name', 'p_o_box', 'school_batch', 'school_address', 'location', 'school_owner_name', 
-        'tax_number']
 
-class ResultPrimaryForms(forms.ModelForm):
-    class Meta:
-        model = SectionPrimary
-        fields = '__all__'
-
-class EditResultPrimaryForms(forms.ModelForm):
-    class Meta:
-        model = SectionPrimary
-        fields = '__all__'
-
-class ContactForm(forms.ModelForm):
-    class Meta:
-        model = Contact
-        fields = '__all__'
 
 
 
